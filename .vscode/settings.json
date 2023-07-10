@@ -5,5 +5,10 @@
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
   "thunder-client.saveToWorkspace": true
 }
+
+
