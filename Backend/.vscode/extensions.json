@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "mongodb.mongodb-vscode",
+    "xabikos.JavaScriptSnippets",
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.code-runner",
+    "rangav.vscode-thunder-client" // Add Thunder Client extension here
+  ]
+}
