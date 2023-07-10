@@ -1,21 +1,98 @@
 [
   {
-    "_id": "985fc239-42f4-4f5d-854a-dcf1abff4135",
+    "_id": "32055a21-e6f2-4691-8929-bc4ef882b58f",
     "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
-    "containerId": "",
-    "name": "Login User",
-    "url": "https://black-hairdresser-mvcqo.pwskills.app:7000",
-    "method": "GET",
-    "sortNum": 10000,
-    "created": "2023-07-10T04:44:51.237Z",
-    "modified": "2023-07-10T04:45:45.638Z",
-    "headers": [],
+    "containerId": "332966ae-6572-4436-b765-7bc6a4fdafe8",
+    "name": "Create a New User",
+    "url": "https://black-hairdresser-mvcqo.pwskills.app:6000/api/auth/createuser",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-07-10T06:23:18.048Z",
+    "modified": "2023-07-10T06:42:12.209Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\":\"kanishkshakya1@gmil.com\",\n  \"password\":\"papakapara\"\n}",
+      "raw": "{\n  \"name\":\"Kanishk\",\n  \"email\":\"kanishk21@gmail.com\",\n  \"password\":\"papakapara\"\n}",
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "34d085b0-3af4-4e82-b933-92fdeb9eb098",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "332966ae-6572-4436-b765-7bc6a4fdafe8",
+    "name": "User login using Credentials ",
+    "url": "",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-07-10T06:23:44.718Z",
+    "modified": "2023-07-10T06:23:44.718Z",
+    "headers": []
+  },
+  {
+    "_id": "c5148b76-51e2-41fc-ac4d-4c8f036d8d36",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "332966ae-6572-4436-b765-7bc6a4fdafe8",
+    "name": "Get User Data",
+    "url": "",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-07-10T06:24:04.788Z",
+    "modified": "2023-07-10T06:24:04.789Z",
+    "headers": []
+  },
+  {
+    "_id": "220c2971-b7e2-4542-80e9-cb01dcdea15d",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "fbb1c1a0-8b04-44f0-8592-1989f6420e47",
+    "name": "Fetch all Notes",
+    "url": "",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-07-10T06:24:20.779Z",
+    "modified": "2023-07-10T06:24:20.779Z",
+    "headers": []
+  },
+  {
+    "_id": "a2d42959-2db8-407c-be7a-e67cbf731a79",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "fbb1c1a0-8b04-44f0-8592-1989f6420e47",
+    "name": "Add Note",
+    "url": "",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-07-10T06:24:30.563Z",
+    "modified": "2023-07-10T06:24:30.563Z",
+    "headers": []
+  },
+  {
+    "_id": "10bd08b7-d13c-4031-8234-e2fc4d88c514",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "fbb1c1a0-8b04-44f0-8592-1989f6420e47",
+    "name": "Update Note",
+    "url": "",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-07-10T06:24:41.988Z",
+    "modified": "2023-07-10T06:24:41.988Z",
+    "headers": []
+  },
+  {
+    "_id": "e4b7e1f3-424e-4c51-af8d-3e62e5493dc9",
+    "colId": "5e1d9c41-3c20-4b6e-a56e-5e08c6367006",
+    "containerId": "fbb1c1a0-8b04-44f0-8592-1989f6420e47",
+    "name": "Delete Note",
+    "url": "",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2023-07-10T06:24:56.689Z",
+    "modified": "2023-07-10T06:24:56.689Z",
+    "headers": []
   }
 ]

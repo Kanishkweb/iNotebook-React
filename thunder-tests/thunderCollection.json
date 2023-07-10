@@ -4,6 +4,21 @@
     "colName": "iNotebook",
     "created": "2023-07-10T04:44:40.597Z",
     "sortNum": 10000,
-    "folders": []
+    "folders": [
+      {
+        "_id": "332966ae-6572-4436-b765-7bc6a4fdafe8",
+        "name": "Authentication",
+        "containerId": "",
+        "created": "2023-07-10T06:22:58.940Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "fbb1c1a0-8b04-44f0-8592-1989f6420e47",
+        "name": "Notes",
+        "containerId": "",
+        "created": "2023-07-10T06:23:05.519Z",
+        "sortNum": 20000
+      }
+    ]
   }
 ]
