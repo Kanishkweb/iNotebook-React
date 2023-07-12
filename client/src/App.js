@@ -1,23 +1,27 @@
 import * as React from "react";
 // import { createRoot } from "react-dom/client";
+// --Importing React Router-----------------------------
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+// --Importing Custom Css------------------------------
 import './App.css';
+// --Importing Components-------------------------------
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from "./components/About";
-import NoteState from "./context/notes/NoteState";
 import ErrorComponent from "./components/errorComponent";
 import Alert from "./components/Alert";
 
+
+// ---------------------//------------------------//---------------------------//-------------------------//------------------//
 const Router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
-    <Alert message="This is amazing react course0" />
+    <Alert message="This is amazing react course." />
     <Navbar />
     </>
     ),
@@ -42,9 +46,7 @@ const Router = createBrowserRouter([
 function App() {
   return (
     <>
-      <NoteState>
         <RouterProvider router={Router} />
-        </NoteState>
     </>
   );
 }

@@ -1,10 +1,14 @@
+// --Using-Index.css--
+
+//--Importng-required-package------------------------------------
 import React, { useEffect } from "react";
 import { NavLink,Outlet,useLocation } from "react-router-dom";
-import '../nav.css'
+
+
 const Navbar = () => {
   let location = useLocation();
   useEffect(() => {
-    console.log(location)
+    // console.log(location)
   }, [location]);
   
   return (

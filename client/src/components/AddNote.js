@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Notes from './Notes';
+// import Notes from './Notes';
 import { useContext } from 'react'
 import noteContext from '../context/notes/noteContext'
 // import NoteItem from './NoteItem'

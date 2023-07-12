@@ -2,9 +2,11 @@
 const main = require("./db");
 
 // Express Server Setup
+var cors = require('cors')
 const express = require('express')
 const app = express()
 const port = 8000
+app.use(cors())
 
 // EndPoints 
 

@@ -14,3 +14,7 @@ code {
 i{
   cursor: pointer;
 }
+.active-class {
+  color: red !important;
+  font-weight: bold !important;
+}
