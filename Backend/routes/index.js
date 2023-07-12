@@ -23,7 +23,7 @@ app.use('/api/notes', require('./notes'))
 
 // Listening the port 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`iNotebook Backend listening on port ${port}`)
 })
 // Calling the mongoDB database connection
 main().catch(err => console.log(err));

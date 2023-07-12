@@ -10,11 +10,17 @@ import Navbar from './components/Navbar';
 import About from "./components/About";
 import NoteState from "./context/notes/NoteState";
 import ErrorComponent from "./components/errorComponent";
+import Alert from "./components/Alert";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: (
+      <>
+    <Alert message="This is amazing react course0" />
+    <Navbar />
+    </>
+    ),
     errorElement:<ErrorComponent/>,
     children: [
       {
