@@ -13,6 +13,8 @@ import Navbar from './components/Navbar';
 import About from "./components/About";
 import ErrorComponent from "./components/errorComponent";
 import Alert from "./components/Alert";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 
 // ---------------------//------------------------//---------------------------//-------------------------//------------------//
@@ -35,10 +37,14 @@ const Router = createBrowserRouter([
         path: "/about",
         element: <About />
       },
-      // {
-      //   path:"/contact", 
-      //   element:<Contact/>
-      // }
+      {
+        path:"/login", 
+        element:<Login/>
+      },
+      {
+        path:"/signup", 
+        element:<SignUp/>
+      }
     ]
   }
 

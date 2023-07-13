@@ -2,7 +2,7 @@
 
 //--Importng-required-package------------------------------------
 import React, { useEffect } from "react";
-import { NavLink,Outlet,useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   useEffect(() => {
     // console.log(location)
   }, [location]);
-  
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -31,8 +31,8 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active-class' : 'nav-link'}`}  aria-current="page" to="/">
-                
+                <NavLink className={({ isActive }) => `nav-link ${isActive ? 'active-class' : 'nav-link'}`} aria-current="page" to="/">
+
                   Home
                 </NavLink>
               </li>
@@ -43,21 +43,14 @@ const Navbar = () => {
               </li>
             </ul>
             <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              <NavLink className="btn btn-primary mx-2" to="/login" role="button">Login</NavLink>
+              <NavLink className="btn btn-primary " to="/signup" role="button">SignUp</NavLink>
             </form>
           </div>
         </div>
       </nav>
-      <Outlet/>
-      </>
+      <Outlet />
+    </>
   );
 };
 
