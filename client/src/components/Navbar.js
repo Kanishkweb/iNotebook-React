@@ -3,9 +3,14 @@
 //--Importng-required-package------------------------------------
 import React, { useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+  const history = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    history('/login');
+  }
   let location = useLocation();
   useEffect(() => {
     // console.log(location)
@@ -42,10 +47,10 @@ const Navbar = () => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            {!localStorage.getItem('token')?<form className="d-flex" role="search">
               <NavLink className="btn btn-primary mx-2" to="/login" role="button">Login</NavLink>
               <NavLink className="btn btn-primary " to="/signup" role="button">SignUp</NavLink>
-            </form>
+            </form>:<button className="btn btn-primary" onClick={handleLogout}>Logout</button>}
           </div>
         </div>
       </nav>
