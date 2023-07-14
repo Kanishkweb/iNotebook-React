@@ -8,7 +8,7 @@ To run the iNotebook app locally, follow these steps:
 
 1. Clone the repository:
 
-git clone https://github.com/Kanishkweb/iNotebook-React/
+git clone https://github.com/Kanishkweb/iNotebook-React
 
 
 2. Change into the client directory:
