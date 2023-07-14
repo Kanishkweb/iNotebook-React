@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef,useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import noteContext from '../context/notes/noteContext'
 import NoteItem from './NoteItem'
 import { useNavigate } from 'react-router-dom'
@@ -6,31 +6,31 @@ import { useNavigate } from 'react-router-dom'
 const Notes = () => {
     const history = useNavigate();
     // Using USe State hook--------------
-    const [note, setNote] = useState({id:"",etitle: "", edescription: "" , etag: ""})
+    const [note, setNote] = useState({ id: "", etitle: "", edescription: "", etag: "" })
     const context = useContext(noteContext)
-    const { notes, getNotes,editNote } = context;
+    const { notes, getNotes, editNote } = context;
     const ref = useRef(null)
     const refClose = useRef(null)
     // Update Note Function------------
     const updateNote = (currentNote) => {
         ref.current.click()
-        setNote({id:currentNote._id, etitle:currentNote.title , edescription:currentNote.description , etag:currentNote.tag})
+        setNote({ id: currentNote._id, etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag })
     }
     // onChange Function----------------
     const onChange = (e) => {
-        setNote({...note, [e.target.name]: e.target.value})
+        setNote({ ...note, [e.target.name]: e.target.value })
 
     }
     // handleCLick Function----------------
     const handleClick = (e) => {
         // console.log('Updating the Note',note)
-        editNote(note.id, note.etitle, note.edescription , note.etag)
-        refClose.current.click()        
+        editNote(note.id, note.etitle, note.edescription, note.etag)
+        refClose.current.click()
     }
     useEffect(() => {
-        if(localStorage.getItem('token')){
+        if (localStorage.getItem('token')) {
             getNotes()
-        } else{
+        } else {
             history('/login');
         }
         // eslint-disable-next-line
@@ -71,20 +71,25 @@ const Notes = () => {
                         </div>
                         <div className="modal-footer">
                             <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" disabled={note.etitle.length<5 || note.edescription.length<5}  className="btn btn-primary" onClick={handleClick}>Update Note</button>
+                            <button type="button" disabled={note.etitle.length < 5 || note.edescription.length < 5} className="btn btn-primary" onClick={handleClick}>Update Note</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="row my-3 mx-2">
-                <h1>Your Note</h1>
-                <div className="container mx-8"> 
-                {notes.length===0 && 'No Notes to Display'}
+
+
+            <br />
+            <div className='container'>
+                <div className="row my-3 ">
+                    <h1>Your Note</h1>
+                    <div className="container mx-8">
+                        {notes.length === 0 && 'No Notes to Display'}
+                    </div>
+                    {notes.map((note) => {
+                        // console.log(note);
+                        return <NoteItem note={note} updateNote={updateNote} key={note._id} />
+                    })}
                 </div>
-                {notes.map((note) => {
-                    // console.log(note);
-                    return <NoteItem note={note} updateNote={updateNote} key={note._id} />
-                })}
             </div>
         </>
     )

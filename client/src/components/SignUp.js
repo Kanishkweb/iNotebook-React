@@ -34,7 +34,8 @@ const SignUp = () => {
             localStorage.setItem('token', json.authToken);
             history('/');
         } catch (error) {
-            console.error(error);
+            alert('Invalid Credentials Try to SignUp with Diffrent')
+            // console.error(error);
             // Handle the error here, such as displaying an error message to the user
         }
     };
@@ -47,6 +48,7 @@ const SignUp = () => {
     }
     return (
         <div className='container'>
+            <h1 className='my-4'>SignUp to iNotebook</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name " className="form-label">Name</label>

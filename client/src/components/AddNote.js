@@ -20,7 +20,7 @@ const AddNote = () => {
   return (
     <>
       <div className='container'>
-        <h1>Add a Note</h1>
+        <h1 className='my-4'>Add a Note</h1>
         <form>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">Title</label>

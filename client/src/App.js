@@ -15,8 +15,8 @@ const Router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Alert message="This is an amazing react course." />
         <Navbar />
+        <Alert message="This is an amazing react course." />
       </>
     ),
     errorElement: <ErrorComponent />,
